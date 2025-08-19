@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#header_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_pic {
+    display: block;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.main_pic {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.dessert_drink_pic {
+    width: calc(100vw - 410px);
+    height: 250px;
+    object-fit: cover;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.header_img {
+    width: 75px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+h2 {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    font-size: 50px;
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    color: orangered;
+    text-decoration: dashed;
+    text-decoration-line: underline;
+}
+
+section {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links {
+    font-size: 35px;
+    color: orangered;
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+}
+
+main {
+    display: flex;
+}
+
+#dishes {
+    width: calc(100vw - 410px);
+    height: 150px;
+    background-color: rgb(224, 222, 222);
+    border: 1px solid black;
+    margin: 15px;
+}
+
+#name {
+    height: auto;
+    font-size: 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#description {
+    height: auto;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#price {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.feedback {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.feedback.show {
+    opacity: 1;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    font-size: 25px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.p_tag_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_message {
+    font-size: 25px;
+}
+
+.feedback_stars {
+    margin: 10px 0 10px 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.stars {
+    gap: 5px;
+    cursor: pointer;
+    direction: rtl;
+}
+
+.star {
+    transition: color 0.3s;
+    direction: ltr;
+}
+
+.star:hover,
+.star:hover~.star {
+    color: orange;
+}
