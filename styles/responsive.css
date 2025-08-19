@@ -1,0 +1,411 @@
+@media (max-width: 730px) {
+
+    #dishes {
+        width: calc(100vw - 310px);
+        height: auto;
+        background-color: rgb(224, 222, 222);
+        border: 1px solid black;
+        margin: 15px;
+    }
+
+    #name {
+        height: auto;
+        font-size: 25px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #description {
+        height: auto;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    #price {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .dessert_drink_pic {
+        width: calc(100vw - 310px);
+        height: 250px;
+        object-fit: cover;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    #add_button {
+        font-size: 25px;
+        border: 1px solid black;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        right: 25px;
+    }
+
+    #name {
+        height: auto;
+        font-size: 20px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 630px) {
+
+    #basket_icon {
+        font-size: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        border: 3px solid orangered;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    .head_div {
+        text-align: center;
+    }
+
+    #dishes {
+        width: calc(100vw - 40px);
+        height: 150px;
+        background-color: rgb(224, 222, 222);
+        border: 1px solid black;
+        margin: 10px 0 10px 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #name {
+        width: 100%;
+        height: auto;
+        font-size: 3dvh;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #description {
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+        margin: 10px 0 0 0;
+    }
+
+    #price {
+        width: 100%;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    #basket_section {
+        visibility: hidden;
+        max-height: 0;
+        width: 0;
+        margin: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    #add_button {
+        font-size: 30px;
+        border: 1px solid black;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+
+    #toggleBasketBtn {
+        background-color: orangered;
+        width: 100%;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .remove_button {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 5px 0 0 0;
+    }
+
+    #basket_over {
+        background-color: white;
+        padding: 0;
+        width: calc(100vw - 40px);
+        height: auto;
+        overflow-y: auto;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+    }
+
+    .order_button {
+        background-color: orange;
+        font-size: 35px;
+        width: calc(100vw - 60px);
+        cursor: pointer;
+        margin: 0 0 5px 0;
+        border-radius: 10px;
+    }
+
+    .h2 {
+        color: orangered;
+    }
+
+    .dessert_drink_pic {
+        width: calc(100vw - 40px);
+        height: 250px;
+        object-fit: cover;
+        margin: 0 10px 0 10px;
+    }
+
+    .order_message {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 5px 0;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .links {
+        font-size: 30px;
+    }
+
+    footer {
+        width: 100%;
+        height: 100px;
+        font-size: 20px;
+        background-color: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header_img {
+        width: 35px;
+        height: 35px;
+        margin: 0 5px 0 5px;
+    }
+}
+
+
+@media (max-width: 475px) {
+
+    .links {
+        font-size: 22px;
+    }
+
+    #name {
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    #description {
+        height: auto;
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    #price {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    #add_button {
+        font-size: 30px;
+        border: 1px solid black;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .delete_button {
+        background-color: rgb(224, 222, 222);
+        color: black;
+        border: 3px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    #basket_icon {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    h4 {
+        font-size: 45px;
+    }
+
+    #offer_section {
+        max-width: 99%;
+    }
+
+    #dishes {
+        width: 98%;
+        height: 150px;
+        background-color: rgb(224, 222, 222);
+        border: 1px solid black;
+        margin: 0 5px 10px 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #description {
+        max-width: 300px;
+        height: auto;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    #name {
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #price {
+        max-width: 320px;
+        font-size: 25px;
+        margin: 10px 0 0 0;
+    }
+
+    #add_button {
+        font-size: 30px;
+        border: 1px solid black;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    footer {
+        width: 100%;
+        height: 100px;
+        font-size: 15px;
+        background-color: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header_img {
+        width: 35px;
+        height: 35px;
+        margin: 0 5px 0 5px;
+    }
+
+    #basket_button {
+        width: calc(100vw - 40px);
+        border-color: white;
+        border-width: 2px;
+        border-style: dashed;
+        font-size: 22px;
+    }
+
+    .dish_basket {
+        margin: 10px 0 0 0;
+        font-size: 20px;
+    }
+
+    .delete_div {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0 10px 0;
+    }
+
+    .delete_button {
+        background-color: rgb(224, 222, 222);
+        color: black;
+        border: 3px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .p_tag_basket {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .order_button {
+        background-color: orange;
+        font-size: 35px;
+        width: calc(100vw - 100px);
+        cursor: pointer;
+        margin: 0 0 5px 0;
+        border-radius: 10px;
+    }
+}
