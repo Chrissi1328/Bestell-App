@@ -1,0 +1,43 @@
+#basket_section {
+    width: 400px;
+    height: auto;
+    background-color: rgb(224, 222, 222);
+    border: 1px solid black;
+    position: relative;
+    right: 0;
+    margin: 15px 15px 0 0;
+}
+
+#basket {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.basket-item {
+    margin-top: 25px;
+}
+
+.p_tag_basket {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.dish_basket {
+    font-size: 25px;
+}
+
+.basket_finalSum {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
