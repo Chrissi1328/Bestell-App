@@ -1,0 +1,68 @@
+#basket_icon {
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid orangered;
+    border-radius: 5px;
+    display: none;
+    background-color: orange;
+    margin: 0 0 0 80px;
+}
+
+.basket_buttons {
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+    margin: 10px;
+}
+
+.delete_div {
+    width: 50px;
+    height: 50px;
+}
+
+.delete_button {
+    background-color: rgb(224, 222, 222);
+    color: black;
+    border: 3px solid orangered;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+#toggleBasketBtn {
+    display: none;
+    margin: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+}
+
+#basket_button {
+    width: calc(100vw - 40px);
+    border-color: white;
+    border-width: 2px;
+    border-style: dashed;
+}
+
+.order_button {
+    background-color: orange;
+    font-size: 35px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#add_button {
+    font-size: 40px;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    right: 25px;
+}
