@@ -37,48 +37,31 @@ function getDrinks() {
 
 function add_Dish(index) {
     let dish = myDishes[index];
+    addToBasket(dish);
+    renderBasket();
+    showFeedbackMessage();
+}
 
+function addToBasket(item) {
     for (let i = 0; i < basket_dishes.length; i++) {
-        if (basket_dishes[i].dish.name === dish.name) {
+        if (basket_dishes[i].dish.name === item.name) {
             basket_dishes[i].quantity += 1;
-            renderBasket();
             return;
         }
     }
-
-    basket_dishes.push({ dish: dish, quantity: 1 });
-    renderBasket()
-    showFeedbackMessage()
+    basket_dishes.push({ dish: item, quantity: 1 });
 }
 
 function add_Dessert(index) {
     let dessert = myDesserts[index];
-
-    for (let i = 0; i < basket_dishes.length; i++) {
-        if (basket_dishes[i].dish.name === dessert.name) {
-            basket_dishes[i].quantity += 1;
-            renderBasket();
-            return;
-        }
-    }
-
-    basket_dishes.push({ dish: dessert, quantity: 1 });
+    addToBasket(dessert)
     renderBasket()
     showFeedbackMessage()
 }
 
 function add_Drink(index) {
     let drink = myDrinks[index];
-
-    for (let i = 0; i < basket_dishes.length; i++) {
-        if (basket_dishes[i].dish.name === drink.name) {
-            basket_dishes[i].quantity += 1;
-            renderBasket();
-            return;
-        }
-    }
-
-    basket_dishes.push({ dish: drink, quantity: 1 });
+    addToBasket(drink)
     renderBasket()
     showFeedbackMessage()
 }
