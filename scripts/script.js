@@ -2,44 +2,23 @@ let basket_dishes = [];
 
 function init() {
     getDishes()
-    getDesserts()
-    getDrinks()
 }
 
 function getDishes() {
     let ContentRef = document.getElementById("offer_section")
     ContentRef.innerHTML = "";
 
-    for (let index = 0; index < myDishes.length; index++) {
-        ContentRef.innerHTML += getDishesTemplate(index);
-    }
-}
-
-function getDesserts() {
     let DessertsRef = document.getElementById("desserts_section");
     DessertsRef.innerHTML = "";
 
-    for (let index = 0; index < myDesserts.length; index++) {
-        DessertsRef.innerHTML += getDessertsTemplate(index);
-
-    }
-}
-
-function getDrinks() {
     let DrinksRef = document.getElementById("drinks_section");
     DrinksRef.innerHTML = "";
 
-    for (let index = 0; index < myDrinks.length; index++) {
+    for (let index = 0; index < myDishes.length; index++) {
+        ContentRef.innerHTML += getDishesTemplate(index);
+        DessertsRef.innerHTML += getDessertsTemplate(index);
         DrinksRef.innerHTML += getDrinksTemplate(index);
-
     }
-}
-
-function add_Dish(index) {
-    let dish = myDishes[index];
-    addToBasket(dish);
-    renderBasket();
-    showFeedbackMessage();
 }
 
 function addToBasket(item) {
@@ -52,21 +31,24 @@ function addToBasket(item) {
     basket_dishes.push({ dish: item, quantity: 1 });
 }
 
-function add_Dessert(index) {
-    let dessert = myDesserts[index];
-    addToBasket(dessert)
-    renderBasket()
-    showFeedbackMessage()
-}
-
-function add_Drink(index) {
-    let drink = myDrinks[index];
-    addToBasket(drink)
-    renderBasket()
-    showFeedbackMessage()
+function addItemToBasket(array, index) {
+    addToBasket(array[index]);
+    renderBasket();
+    showFeedbackMessage();
 }
 
 function renderBasket() {
+    let basketRef = document.getElementById("basket");
+    if (basket_dishes.length === 0) {
+        const empty = emptyBasketTemplate();
+        basketRef.innerHTML = empty;
+        document.getElementById("basket_over").innerHTML = `<button onclick="toggleBasket()" class="remove_button">✖</button>${empty}`;
+        return;
+    }
+    let sum = basket_dishes.reduce((total, item) => total + item.dish.price * item.quantity, 0);
+    let html = fullBasketTemplate(basket_dishes, sum);
+    basketRef.innerHTML = `<h2>Warenkorb</h2>` + html;
+    document.getElementById("basket_over").innerHTML = `<button onclick="toggleBasket()" class="remove_button">✖</button><h2>Warenkorb</h2>${html}`;
     emptyBasketTemplate()
     fullBasketTemplate()
 }
@@ -96,10 +78,8 @@ function toggleBasket() {
 }
 
 function submit_Order() {
-    basket_dishes = [];
-    renderBasket();
-    submitOrderTemplate()
-    submitOrderTemplateOverlay()
+    document.getElementById("basket").innerHTML = submitOrderTemplate();
+    document.getElementById("basket_over").innerHTML = submitOrderTemplateOverlay();
 }
 
 function showFeedbackMessage() {
