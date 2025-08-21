@@ -55,3 +55,20 @@ function fullBasketTemplate() {
     basketRef.innerHTML += `<div class="basket_finalSum"><p><strong>Gesamtsumme: ${finalSum.toFixed(2)} €</strong></p></div><button class="order_button" onclick="submit_Order()">Bestellen</button`;
     document.getElementById("basket_over").innerHTML = `<button onclick="toggleBasket()" class="remove_button">✖</button>${basketRef.innerHTML}`;
 }
+
+function submitOrderTemplate() {
+    let basketRef = document.getElementById("basket");
+    basketRef.innerHTML = `
+        <h2>Warenkorb</h2>
+        <p class="order_message">Vielen Dank! Deine Bestellung wird nun bearbeitet!</p>`;
+}
+
+function submitOrderTemplateOverlay() {
+    let basketOverlay = document.getElementById("basket_over");
+    if (basketOverlay) {
+        basketOverlay.innerHTML = `
+            <button onclick="toggleBasket()" class="remove_button">✖</button>
+            <h2>Warenkorb</h2>
+            <p class="order_message">Vielen Dank! Deine Bestellung wird nun bearbeitet 🍽️</p>`;
+    }
+}

@@ -115,21 +115,8 @@ function toggleBasket() {
 function submit_Order() {
     basket_dishes = [];
     renderBasket();
-
-    let basketRef = document.getElementById("basket");
-    basketRef.innerHTML = `
-        <h2>Warenkorb</h2>
-        <p class="order_message">Vielen Dank! Deine Bestellung wird nun bearbeitet!</p>
-    `;
-
-    let basketOverlay = document.getElementById("basket_over");
-    if (basketOverlay) {
-        basketOverlay.innerHTML = `
-            <button onclick="toggleBasket()" class="remove_button">✖</button>
-            <h2>Warenkorb</h2>
-            <p class="order_message">Vielen Dank! Deine Bestellung wird nun bearbeitet 🍽️</p>
-        `;
-    }
+    submitOrderTemplate()
+    submitOrderTemplateOverlay()
 }
 
 function showFeedbackMessage() {
